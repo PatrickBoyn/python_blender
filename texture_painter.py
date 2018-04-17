@@ -9,7 +9,7 @@ import codecs
 
 
 def get_text(csv_filename):
-    text = codecs.open(r'C:\Users\dakil\Desktop\Repos\python_blender' + '\\' + csv_filename)
+    text = codecs.open(r'C:\Users\dakil\Desktop\Repos\python_blender\\' + csv_filename)
 
 def go():
      print("Texture Painter is working!")
