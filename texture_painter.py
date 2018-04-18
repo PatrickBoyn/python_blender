@@ -10,9 +10,9 @@ import csv
 
 # Please note that this only works inside blender. Running this code outside produces None objects.
 def get_text(csv_filename):
-    with codecs.open(csv_filename, 'r', 'utf-8'):
-        iterable = csv.reader(csv_filename)
-        header = iterable
+    with codecs.open(csv_filename, 'r', 'utf-8') as stream:
+        iterable = csv.reader(stream)
+        header = next(iterable)
         # The first loop turns header into a list.
         for i in header:
             for j in i:
