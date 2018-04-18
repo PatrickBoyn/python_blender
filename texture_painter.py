@@ -14,11 +14,12 @@ def get_text(csv_filename):
         iterable = csv.reader(csv_filename)
         header = iterable
         for i in header:
-            print(i)
+            for j in i:
+                print(j, end="")
 
         return stream
 
 
 def go():
      print("Texture Painter is working!")
-     get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.txt')
+     get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.csv')
