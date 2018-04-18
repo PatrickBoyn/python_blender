@@ -6,22 +6,20 @@
    importlib.reload(texture_painter)
    '''
 import codecs
-import csv 
+import os 
 
 # Please note that this only works inside blender. Running this code outside produces None objects.
-def get_text(csv_filename):
-    with codecs.open(csv_filename, 'r', 'utf-8') as stream:
-        iterable = csv.reader(stream)
-        header = next(iterable)
-        # The first loop turns header into a list.
-        for i in header:
-            for j in i:
-                # The second loop prints it out nice and neat.
-                print(j, end="")
+def get_text(text_file):
 
-        return header
+    with open(text_file) as fp:
+        line = fp.readline()
+        count = 1
+        while line:
+            print(line)
+            line = fp.readline()
+            count +-1
 
 
 def go():
      print("Texture Painter is working!")
-     get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.csv')
+     get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.txt')
