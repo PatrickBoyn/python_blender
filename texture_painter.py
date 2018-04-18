@@ -1,4 +1,4 @@
-'''Renders text from a CSV file to textures 
+'''Renders text from a text file to textures 
    and applies them to multiple objects. 
    Use these when starting blender:
    import os, sys, importlib; sys.path.append(os.path.dirname(bpy.data.filepath)); import texture_painter
@@ -24,3 +24,4 @@ def get_text(text_file):
 def go():
      print("Texture Painter is working!")
      get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.txt')
+     print("Finished!")
