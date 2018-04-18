@@ -13,8 +13,10 @@ def get_text(csv_filename):
     with codecs.open(csv_filename, 'r', 'utf-8') as stream:
         iterable = csv.reader(csv_filename)
         header = iterable
+        # The first loop turns header into a list.
         for i in header:
             for j in i:
+                # The second loop prints it out nice and neat.
                 print(j, end="")
 
         return stream
