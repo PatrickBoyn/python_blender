@@ -5,7 +5,7 @@
    After running the above:
    importlib.reload(texture_painter)
    '''
-
+from time import time
 # Please note that this only works inside blender. Running this code outside produces None objects.
 def get_text(text_file):
 
@@ -22,6 +22,11 @@ def get_text(text_file):
 
 
 def go():
-     print("Texture Painter is working!")
-     get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.txt')
-     print("Finished!")
+    start = time()
+    print("Texture Painter is working!")
+    get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.txt')
+    print("Finished!")
+    end = time()
+    time_elapsed = end - start
+    print("The program took: " + str(round(time_elapsed,4)))
+     
