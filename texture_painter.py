@@ -5,8 +5,6 @@
    After running the above:
    importlib.reload(texture_painter)
    '''
-import codecs
-import os 
 
 # Please note that this only works inside blender. Running this code outside produces None objects.
 def get_text(text_file):
@@ -14,7 +12,7 @@ def get_text(text_file):
     with open(text_file) as fp:
         line = fp.readline()
         count = 1
-        
+
         while line:
             print(line)
             line = fp.readline()
