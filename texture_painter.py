@@ -10,7 +10,7 @@ import csv
 
 # Please note that this only works inside blender. Running this code outside produces None objects.
 def get_text(csv_filename):
-    with codecs.open(csv_filename, 'r', 'utf-8') as stream:
+    with codecs.open(csv_filename, 'r', 'utf-8'):
         iterable = csv.reader(csv_filename)
         header = iterable
         # The first loop turns header into a list.
@@ -19,7 +19,7 @@ def get_text(csv_filename):
                 # The second loop prints it out nice and neat.
                 print(j, end="")
 
-        return stream
+        return header
 
 
 def go():
