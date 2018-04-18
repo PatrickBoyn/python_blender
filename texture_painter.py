@@ -14,10 +14,13 @@ def get_text(text_file):
     with open(text_file) as fp:
         line = fp.readline()
         count = 1
+        
         while line:
             print(line)
             line = fp.readline()
             count +-1
+
+        return fp
 
 
 def go():
