@@ -25,12 +25,18 @@ def get_text(text_file):
 
 
 def render_to_text(text):
-    pass
+    image = Image.new('RGB', (128,128))
+    draw = ImageDraw.Draw(image)
+    fnt = ImageFont.truetype('arial.ttf', 50)
+    draw.text((0,0), text, font=fnt, fill=(255,0,0))
+    image.save("test.png")
+
 
 def go():
     start = time()
     print("Texture Painter is working!")
     get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.txt')
+    render_to_text("This is fun!")
     print("Finished!")
     end = time()
     time_elapsed = end - start
