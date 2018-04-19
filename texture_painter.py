@@ -7,6 +7,8 @@
    importlib.reload(texture_painter)
    '''
 from time import time
+from PIL import Image, ImageFont, ImageDraw
+
 # Please note that this only works inside blender. Running this code outside produces None objects.
 def get_text(text_file):
 
@@ -21,6 +23,9 @@ def get_text(text_file):
 
         return fp
 
+
+def render_to_text(text):
+    pass
 
 def go():
     start = time()
