@@ -29,7 +29,7 @@ def render_to_text(text):
     draw =  ImageDraw.Draw(image)
     fnt =   ImageFont.truetype('arial.ttf', 50)
     draw.text((0,0), text, font=fnt, fill=(255,0,0))
-    image.save(r"C:\Users\dakil\Desktop\Repos\python_blender\test3.png")
+    image.save(r"C:\Users\dakil\Desktop\Repos\python_blender\test.png")
 
 
 def go():
