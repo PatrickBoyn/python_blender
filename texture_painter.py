@@ -21,7 +21,7 @@ def get_text(text_file):
             line = fp.readline()
             count +-1
 
-    return fp
+    yield fp
 
 
 def render_to_text(text):
@@ -29,14 +29,14 @@ def render_to_text(text):
     draw =  ImageDraw.Draw(image)
     fnt =   ImageFont.truetype('arial.ttf', 50)
     draw.text((0,0), text, font=fnt, fill=(255,0,0))
-    image.save(r"C:\Users\dakil\Desktop\Repos\python_blender\test2.png")
+    image.save(r"C:\Users\dakil\Desktop\Repos\python_blender\test3.png")
 
 
 def go():
     start = time()
     print("Texture Painter is working!\n")
     for item in get_text(r'C:\Users\dakil\Desktop\Repos\python_blender\crawl.txt'):
-        render_to_text(item)
+        render_to_text("Things!")
     print("Finished!")
     end = time()
     time_elapsed = end - start
